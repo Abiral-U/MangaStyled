@@ -50,7 +50,7 @@ function CoverCard() {
 
         <div className="relative px-5 py-4">
           <p className="font-comic text-2xl leading-none tracking-wide text-ink text-shadow-harsh">
-            CODE NAME: THE FULLSTACK PHANTOM
+            CODE NAME: THE AI PHANTOM
           </p>
           <p className="mt-2 font-pop text-xs tracking-[0.25em] text-ink/70">
             {profile.name} · EST. 2016 · {profile.location}
@@ -129,8 +129,8 @@ export function Hero() {
             variants={item}
             className="font-comic text-6xl leading-[0.9] tracking-wide text-ink text-shadow-harsh sm:text-8xl lg:text-[8rem]"
           >
-            REN
-            <span className="block text-blood text-shadow-harsh">TAKAHASHI</span>
+            ABIRAL
+            <span className="block text-blood text-shadow-harsh"><UPADHYAY></UPADHYAY></span>
           </motion.h1>
 
           <motion.p variants={item} className="mt-5 max-w-lg font-body text-lg font-semibold leading-snug text-ink/90 sm:text-xl">
