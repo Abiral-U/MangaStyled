@@ -98,7 +98,7 @@ export function Experience() {
           chapter="第3話"
           title="BATTLE RECORD"
           katakana="戦歴"
-          subtitle="Four story arcs. Four chapters of shipping things that refused to break."
+          subtitle="Two story arcs. Four chapters of shipping things that refused to break."
         />
 
         <div className="relative">

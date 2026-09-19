@@ -19,7 +19,7 @@ const fightStats = [
   { label: 'COMBAT CLASS', value: 'AI ENGINEER · A-RANK' },
   { label: 'CHI PATTERN', value: 'CLEAN PIPELINES / 0 TECH DEBT' },
   { label: 'WEAKNESS', value: 'NEW PAPER ON ARXIV' },
-  { label: 'PATENTS PUBLISHED', value: '2 (AI + CYBERSECURITY)' },
+  { label: 'PATENTS PUBLISHED', value: '3 (AI + CYBERSECURITY)' },
   { label: 'PROBLEMS SOLVED', value: '250+' },
 ];
 
@@ -44,7 +44,7 @@ export function About() {
             <SpeechBubble variant="manga" tone="bone" className="mb-6">
               <span className="font-comic text-sm tracking-widest text-blood">NARRATION</span>
               <p className="font-body text-base leading-relaxed font-semibold text-ink sm:text-lg">
-                A developer from Prayagraj who taught himself to code before he finished university.
+                A developer who taught himself to code before he finished university.
                 Three years later he builds AI automation pipelines, RAG systems, and computer vision solutions
                 that turn raw data into intelligent actions — from news aggregation to biodiversity conservation.
               </p>
@@ -112,10 +112,10 @@ export function About() {
 
             <div className="mt-6 grid grid-cols-2 gap-4">
               {[
-                { icon: MapPin, text: 'Based in Prayagraj, UP' },
+                { icon: MapPin, text: 'Based in India' },
                 { icon: Coffee, text: 'Brew ratio 1:16' },
                 { icon: Zap, text: 'AI Automation' },
-                { icon: Award, text: '2 Patents Published' },
+                { icon: Award, text: '3 Patents Published' },
               ].map(({ icon: Icon, text }) => (
                 <MangaPanel key={text} accent="paper" shadow={false} className="p-3" skew="none">
                   <div className="flex items-center gap-2">

@@ -17,11 +17,11 @@ export function Footer() {
             <div className="flex items-center justify-center gap-3 md:justify-start">
               <img src={stampSeal} alt="" aria-hidden="true" className="h-10 w-10 -rotate-6" />
               <p className="font-comic text-2xl tracking-widest">
-                <span className="text-blood">REN</span> TAKAHASHI
+                <span className="text-blood">ABIRAL</span> UPADHYAY
               </p>
             </div>
             <p className="mt-2 font-pop text-xs tracking-[0.25em] text-bone/60">
-              {profile.volume} · THE FULLSTACK PHANTOM · {profile.location}
+              {profile.volume} · THE AI PHANTOM · {profile.location}
             </p>
           </div>
 
