@@ -1,8 +1,8 @@
-# 武 Ren Takahashi — Manga Portfolio
+# 武 AI Automation Engineer — Manga Portfolio
 
 A production-ready, highly interactive personal portfolio rendered in the visual language of a Japanese manga / comic book. Every section reads like a new chapter of a volume: covers, halftone shading, katakana onomatopoeia, jagged speech bubbles, speed lines, and a chapter-reader modal that turns each project into a readable comic sequence.
 
-Built with **React 18+** (19), **Vite**, **TypeScript** (strict), **Tailwind CSS v4**, **Framer Motion**, and **Lucide**.
+Built with **React 19**, **Vite**, **TypeScript** (strict), **Tailwind CSS v4**, **Framer Motion**, and **Lucide**.
 
 ---
 
@@ -31,6 +31,7 @@ Built with **React 18+** (19), **Vite**, **TypeScript** (strict), **Tailwind CSS
 - **7 interactive sections** — Cover/Hero, About, Battle Record (experience), Works (projects), Techniques (skills gauges), Titles (certifications), and Transmission (contact form).
 - **Comic navigation** — sticky header with chapter labels (`第1話 … 第7話`), scroll-spy active states, reading-progress gauge, and a mobile chapter sheet.
 - **Fully typed data layer** — all content lives in typed datasets, so adding a project or skill never requires touching components.
+- **Fully responsive** — mobile-first Tailwind CSS with adaptive grids, flexible typography, and touch-friendly interactions.
 
 ---
 
@@ -38,7 +39,7 @@ Built with **React 18+** (19), **Vite**, **TypeScript** (strict), **Tailwind CSS
 
 | Layer            | Choice                                                        |
 | ---------------- | ------------------------------------------------------------- |
-| Framework        | React 19 (18+ compatible) via Vite 6                          |
+| Framework        | React 19 via Vite 6                                           |
 | Language         | TypeScript 5.8 (strict, `noUnusedLocals`, `verbatimModuleSyntax`) |
 | Styling          | Tailwind CSS v4 (`@tailwindcss/vite`) + custom manga CSS      |
 | Animation        | Framer Motion 12 (panels, page turns, floating keyframes)     |
@@ -109,8 +110,8 @@ src/
 │                              # Skills, Certifications, Contact
 ├── data/                      # Strongly typed content (edit here)
 │   ├── profile.ts             # Persona, nav chapters, socials
-│   ├── projects.ts            # Six projects incl. full chapters/pages
-│   ├── experience.ts          # Career "battle disks"
+│   ├── projects.ts            # 3 projects incl. full chapters/pages
+│   ├── experience.ts          # Career "battle disks" (RevNDev + Sharda)
 │   ├── skills.ts              # Power gauges grouped by category
 │   └── certifications.ts      # S–C rank seals
 ├── hooks/
@@ -179,6 +180,7 @@ All content lives in `src/data/` and is strongly typed via `src/types/index.ts`.
 - `prefers-reduced-motion` disables decorative animation.
 - The ink cursor is additive (native cursor remains behind it) and only activates on `(pointer: fine)` devices.
 - Production build ~141 kB gzipped JS / ~9 kB CSS; fonts are fetched from Google Fonts with graceful system fallbacks.
+- Fully responsive across mobile, tablet, and desktop with adaptive layouts.
 
 ---
 

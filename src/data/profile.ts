@@ -1,19 +1,19 @@
 import type { NavItem, ProfileLink, SocialLink } from '../types';
 
 export const profile = {
-  name: 'Ren Takahashi',
-  nameKatakana: 'タカハシ・レン',
-  epithet: 'The Fullstack Phantom',
+  name: 'Your Name',
+  nameKatakana: 'ユアネーム',
+  epithet: 'The AI Automation Phantom',
   volume: 'VOL.1',
-  location: 'Tokyo, JP · UTC+9',
+  location: 'Prayagraj, UP · UTC+5:30',
   availability: 'OPEN FOR WORK',
-  email: 'ren@takahashi.dev',
+  email: 'your.email@example.com',
   tagline:
-    'I turn raw pixels and wild ideas into battle-ready products that load fast, scale hard, and never go down without a fight.',
+    'I build AI-powered automation pipelines, RAG systems, and computer vision solutions that turn raw data into intelligent actions — from news aggregation to biodiversity conservation.',
   heroStats: [
-    { label: 'YEARS IN COMBAT', value: '10+' },
-    { label: 'PROJECTS DELIVERED', value: '40+' },
-    { label: 'COFFEE DEPLETED', value: '∞' },
+    { label: 'YEARS IN COMBAT', value: '3+' },
+    { label: 'PROJECTS DELIVERED', value: '10+' },
+    { label: 'PATENTS PUBLISHED', value: '2' },
   ],
 } as const;
 
@@ -28,10 +28,10 @@ export const navItems: NavItem[] = [
 ] as const;
 
 export const socials: SocialLink[] = [
-  { id: 'github', label: 'GitHub', handle: '@rentakahashi', href: 'https://github.com' },
-  { id: 'linkedin', label: 'LinkedIn', handle: 'in/rentakahashi', href: 'https://linkedin.com' },
-  { id: 'x', label: 'X / Twitter', handle: '@ren_dev', href: 'https://x.com' },
-  { id: 'discord', label: 'Discord', handle: 'ren.kojo#0001', href: 'https://discord.com' },
+  { id: 'github', label: 'GitHub', handle: '@yourhandle', href: 'https://github.com' },
+  { id: 'linkedin', label: 'LinkedIn', handle: 'in/yourhandle', href: 'https://linkedin.com' },
+  { id: 'x', label: 'X / Twitter', handle: '@yourhandle', href: 'https://x.com' },
+  { id: 'discord', label: 'Discord', handle: 'yourhandle#0001', href: 'https://discord.com' },
 ] as const;
 
 export const profileLinks: ProfileLink[] = [

@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { MapPin, Coffee, HeartHandshake, Crosshair } from 'lucide-react';
+import { MapPin, Coffee, Award, Zap } from 'lucide-react';
 import { profile } from '../../data/profile';
 import { SectionHeading } from '../common/SectionHeading';
 import { SpeechBubble } from '../common/SpeechBubble';
@@ -9,16 +9,18 @@ import { useAudio } from '../../hooks/useAudio';
 import { useReadingDirection } from '../../hooks/useReadingDirection';
 
 const facts = [
-  'Likes: TypeScript, tonkotsu ramen, and a git history that reads like poetry.',
-  'Dislikes: vague bug reports, and deploy windows after midnight.',
-  'Believes: accessibility is a superpower, not a checkbox.',
+  'Likes: Python, strong coffee, and AI models that actually work in production.',
+  'Dislikes: Vague requirements, and manual processes that should be automated.',
+  'Believes: AI should amplify human capability, not replace human judgment.',
 ];
 
 const fightStats = [
   { label: 'BASE OF OPERATIONS', value: profile.location },
-  { label: 'COMBAT CLASS', value: 'FULL-STACK · A-RANK' },
-  { label: 'CHI PATTERN', value: 'CLEAN COMMITS / 0 WARNINGS' },
-  { label: 'WEAKNESS', value: 'FREE KRISPY KREME' },
+  { label: 'COMBAT CLASS', value: 'AI ENGINEER · A-RANK' },
+  { label: 'CHI PATTERN', value: 'CLEAN PIPELINES / 0 TECH DEBT' },
+  { label: 'WEAKNESS', value: 'NEW PAPER ON ARXIV' },
+  { label: 'PATENTS PUBLISHED', value: '2 (AI + CYBERSECURITY)' },
+  { label: 'PROBLEMS SOLVED', value: '250+' },
 ];
 
 export function About() {
@@ -42,16 +44,18 @@ export function About() {
             <SpeechBubble variant="manga" tone="bone" className="mb-6">
               <span className="font-comic text-sm tracking-widest text-blood">NARRATION</span>
               <p className="font-body text-base leading-relaxed font-semibold text-ink sm:text-lg">
-                A kid from Osaka who taught himself to type before he learned to ride a bike.
-                Ten years later he ships software from Tokyo that a few million people use every day — without breaking a sweat.
+                A developer from Prayagraj who taught himself to code before he finished university.
+                Three years later he builds AI automation pipelines, RAG systems, and computer vision solutions
+                that turn raw data into intelligent actions — from news aggregation to biodiversity conservation.
               </p>
             </SpeechBubble>
 
             <SpeechBubble variant="manga" tone="paper">
               <span className="font-comic text-sm tracking-widest text-blood">NARRATION · CONT.</span>
               <p className="font-body text-base leading-relaxed font-semibold text-ink sm:text-lg">
-                By day he wrangles distributed systems and realtime feeds.
-                By night he draws panels just like these — because a portfolio that can't make you smile is just a CV with extra steps.
+                By day he engineers automation at RevNDev Studios — n8n workflows, LLM integrations, LinkedIn-ready content generation.
+                By night he trains CNNs to hear endangered birds and builds RAG systems that speak SQL.
+                A portfolio that can't make you think is just a resume with extra steps.
               </p>
             </SpeechBubble>
 
@@ -108,10 +112,10 @@ export function About() {
 
             <div className="mt-6 grid grid-cols-2 gap-4">
               {[
-                { icon: MapPin, text: 'Based in Tokyo' },
+                { icon: MapPin, text: 'Based in Prayagraj, UP' },
                 { icon: Coffee, text: 'Brew ratio 1:16' },
-                { icon: HeartHandshake, text: 'Pairs well' },
-                { icon: Crosshair, text: 'Zero-drama' },
+                { icon: Zap, text: 'AI Automation' },
+                { icon: Award, text: '2 Patents Published' },
               ].map(({ icon: Icon, text }) => (
                 <MangaPanel key={text} accent="paper" shadow={false} className="p-3" skew="none">
                   <div className="flex items-center gap-2">
