@@ -142,7 +142,7 @@ export function Projects({ onOpen }: { onOpen: (project: Project) => void }) {
           chapter="第4話"
           title="WORKS"
           katakana="作品"
-          subtitle="Six volumes, hand-drawn serverside. Every cover opens into a readable chapter."
+          subtitle="Three volumes, hand-drawn serverside. Every cover opens into a readable chapter."
         />
 
         <div className="grid gap-x-8 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">

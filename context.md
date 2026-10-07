@@ -15,8 +15,7 @@ The species: a "volume" of 7 chapters (sections), where projects open into a ful
 - Animation: **Framer Motion 12**
 - Icons: **lucide-react**; class merging: **clsx + tailwind-merge** (`cn`)
 
-All content is **fictional but realistic** placeholder data (persona "Ren Takahashi") meant to be
-replaced by the site owner. Domain literals live in `src/data/` and are strongly typed.
+All content in `src/data/` reflects a real AI/Automation engineer persona — ready for deployment.
 
 ## 2. Commands (always run these after changes)
 
@@ -48,10 +47,10 @@ src/
 
   data/                          # Content. Edit these, not components
     profile.ts                   # persona, navItems (7 chapters), socials, profileLinks (as const)
-    projects.ts                  # 6 projects incl. full chapters/pages for the reader
-    experience.ts                # 4 career entries with `arc`, `accent`
-    skills.ts                    # 5 groups (language/framework/database/cloud/design)
-    certifications.ts            # 5 entries with S–C ranks
+    projects.ts                  # 3 projects incl. full chapters/pages for the reader
+    experience.ts                # 2 entries (RevNDev Studios + Sharda University) with `arc`, `accent`
+    skills.ts                    # 5 groups (language/framework/data-ai/cloud/core-cs)
+    certifications.ts            # 3 entries with S–C ranks
 
   hooks/
     useAudio.tsx                 # Web-Audio SFX synth + AudioBusProvider (JSX → .tsx!)
@@ -59,7 +58,7 @@ src/
     useReadingDirection.tsx      # LTR/RTL context + ReadingDirectionProvider (JSX → .tsx!)
 
   components/
-    common/    … MangaNav, IngCursor, IntroSplash, KatakanaText, MangaButton, MangaPanel,
+    common/    … MangaNav, InkCursor, IntroSplash, KatakanaText, MangaButton, MangaPanel,
                  SectionHeading, SpeechBubble, SpeedLines, Footer
     modal/     > MangaChapterReaderModal.tsx   (the flagship feature)
     sections/  > Hero, About, Experience, Projects, Skills, Certifications, Contact
@@ -175,6 +174,6 @@ changes, at minimum verify:
 ## 9. Notes for maintainers
 
 - `dist/` is build output; `.gitignore`d.
-- The persona + social links are placeholders — point them at the real owner before going live.
+- Social links in `profile.ts` are placeholders — point them at the real owner before going live.
 - Anything added to `src/components/`, `src/hooks/`, or `src/data/` should follow the existing
   folder conventions above (one component per file, named exports, `cn()` for classes).
