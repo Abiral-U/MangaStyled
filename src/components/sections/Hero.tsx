@@ -49,7 +49,7 @@ function CoverCard() {
         </div>
 
         <div className="relative px-5 py-4">
-          <p className="font-comic text-2xl leading-none tracking-wide text-ink text-shadow-harsh">
+          <p className="font-comic text-2xl leading-none tracking-wide text-ink ">
             CODE NAME: THE AI PHANTOM
           </p>
           <p className="mt-2 font-pop text-xs tracking-[0.25em] text-ink/70">

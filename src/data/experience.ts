@@ -6,9 +6,9 @@ export const experience: Experience[] = [
     company: 'RevNDev Studios',
     role: 'Automation Engineer',
     arc: 'THE AUTOMATION ARC',
-    period: 'Jul 2026 — PRESENT',
+    period: 'Jul 2026 — Sept 2026',
     startYear: 2026,
-    endYear: null,
+    endYear: 2026,
     location: 'Remote, UP',
     summary:
       'Building end-to-end AI-powered automation pipelines that aggregate, analyze, and transform content at scale.',

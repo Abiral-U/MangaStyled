@@ -1,17 +1,17 @@
 import type { Skill, SkillCategory } from '../types';
 
 const languages: Skill[] = [
-  { id: 'python', name: 'Python', katakana: 'パイソン', category: 'language', powerLevel: 95, years: 5 },
-  { id: 'cpp', name: 'C++', katakana: 'シープラスプラス', category: 'language', powerLevel: 88, years: 4 },
-  { id: 'c', name: 'C', katakana: 'シー', category: 'language', powerLevel: 85, years: 4 },
-  { id: 'sql', name: 'SQL', katakana: 'エスキューエル', category: 'language', powerLevel: 90, years: 4 },
+  { id: 'python', name: 'Python', katakana: 'パイソン', category: 'language', powerLevel: 85, years: 5 },
+  { id: 'cpp', name: 'C++', katakana: 'シープラスプラス', category: 'language', powerLevel: 80, years: 4 },
+  { id: 'c', name: 'C', katakana: 'シー', category: 'language', powerLevel: 80, years: 4 },
+  { id: 'sql', name: 'SQL', katakana: 'エスキューエル', category: 'language', powerLevel: 85, years: 4 },
 ];
 
 const frameworks: Skill[] = [
-  { id: 'tensorflow', name: 'TensorFlow', katakana: 'テンソルフロー', category: 'framework', powerLevel: 92, years: 4 },
-  { id: 'keras', name: 'Keras', katakana: 'ケラス', category: 'framework', powerLevel: 90, years: 4 },
-  { id: 'pytorch', name: 'PyTorch', katakana: 'パイトーチ', category: 'framework', powerLevel: 88, years: 3 },
-  { id: 'langchain', name: 'LangChain', katakana: 'ラングチェーン', category: 'framework', powerLevel: 85, years: 2 },
+  { id: 'tensorflow', name: 'TensorFlow', katakana: 'テンソルフロー', category: 'framework', powerLevel: 80, years: 4 },
+  { id: 'keras', name: 'Keras', katakana: 'ケラス', category: 'framework', powerLevel: 80, years: 4 },
+  { id: 'pytorch', name: 'PyTorch', katakana: 'パイトーチ', category: 'framework', powerLevel: 78, years: 3 },
+  { id: 'langchain', name: 'LangChain', katakana: 'ラングチェーン', category: 'framework', powerLevel: 75, years: 2 },
   { id: 'streamlit', name: 'Streamlit', katakana: 'ストリームリット', category: 'framework', powerLevel: 88, years: 2 },
   { id: 'n8n', name: 'n8n', katakana: 'エヌエイトエヌ', category: 'framework', powerLevel: 85, years: 1 },
 ];

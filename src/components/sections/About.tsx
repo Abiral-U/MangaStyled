@@ -1,18 +1,32 @@
 import { motion } from 'framer-motion';
-import { MapPin, Coffee, Award, Zap } from 'lucide-react';
+import { MapPin, Coffee, Award, Zap, ThumbsUp, ThumbsDown, Sparkles } from 'lucide-react';
 import { profile } from '../../data/profile';
 import { SectionHeading } from '../common/SectionHeading';
-import { SpeechBubble } from '../common/SpeechBubble';
 import { MangaPanel } from '../common/MangaPanel';
 import { KatakanaText } from '../common/KatakanaText';
 import { useAudio } from '../../hooks/useAudio';
 import { useReadingDirection } from '../../hooks/useReadingDirection';
 
 const facts = [
-  'Likes: Python, strong coffee, and AI models that actually work in production.',
-  'Dislikes: Vague requirements, and manual processes that should be automated.',
-  'Believes: AI should amplify human capability, not replace human judgment.',
-];
+  {
+    label: 'LIKES',
+    text: 'Python, strong coffee, and AI models that actually work in production.',
+    icon: ThumbsUp,
+    accent: 'crimson',
+  },
+  {
+    label: 'DISLIKES',
+    text: 'Vague requirements, and manual processes that should be automated.',
+    icon: ThumbsDown,
+    accent: 'black',
+  },
+  {
+    label: 'BELIEVES',
+    text: 'AI should amplify human capability, not replace human judgment.',
+    icon: Sparkles,
+    accent: 'yellow',
+  },
+] as const;
 
 const fightStats = [
   { label: 'BASE OF OPERATIONS', value: profile.location },
@@ -41,29 +55,39 @@ export function About() {
             transition={{ duration: 0.55 }}
             className="relative"
           >
-            <SpeechBubble variant="manga" tone="bone" className="mb-6">
-              <span className="font-comic text-sm tracking-widest text-blood">NARRATION</span>
-              <p className="font-body text-base leading-relaxed font-semibold text-ink sm:text-lg">
-                A developer who taught himself to code before he finished university.
-                Three years later he builds AI automation pipelines, RAG systems, and computer vision solutions
-                that turn raw data into intelligent actions — from news aggregation to biodiversity conservation.
-              </p>
-            </SpeechBubble>
+            <MangaPanel accent="crimson" halftone className="p-6">
+              <div className="flex items-center justify-between gap-4">
+                <h3 className="font-comic text-2xl tracking-wide text-ink">NARRATION</h3>
+                <KatakanaText outline="none" className="text-2xl text-blood" rotate={-8}>
+                  ナレーション
+                </KatakanaText>
+              </div>
 
-            <SpeechBubble variant="manga" tone="paper">
-              <span className="font-comic text-sm tracking-widest text-blood">NARRATION · CONT.</span>
-              <p className="font-body text-base leading-relaxed font-semibold text-ink sm:text-lg">
-                By day he engineers automation at RevNDev Studios — n8n workflows, LLM integrations, LinkedIn-ready content generation.
-                By night he trains CNNs to hear endangered birds and builds RAG systems that speak SQL.
-                A portfolio that can't make you think is just a resume with extra steps.
-              </p>
-            </SpeechBubble>
+              <div className="mt-5 space-y-4">
+                <p className="font-body text-base leading-relaxed font-semibold text-ink sm:text-lg">
+                  A developer who taught himself to code before he finished university.
+                  Three years later he builds AI automation pipelines, RAG systems, and computer vision solutions
+                  that turn raw data into intelligent actions — from news aggregation to biodiversity conservation.
+                </p>
+                <p className="border-b-2 border-dashed border-ink/40 pb-3 font-body text-base leading-relaxed font-semibold text-ink sm:text-lg">
+                  By day he engineers automation at RevNDev Studios — n8n workflows, LLM integrations, LinkedIn-ready content generation.
+                  By night he trains CNNs to hear endangered birds and builds RAG systems that speak SQL.
+                  A portfolio that can't make you think is just a resume with extra steps.
+                </p>
+              </div>
+            </MangaPanel>
 
-            <div className="mt-8 grid gap-4 sm:grid-cols-3">
-              {facts.map((fact, i) => (
-                <SpeechBubble key={fact} variant="thought" tone="paper" padded={false} className={i % 2 === 1 ? 'sm:translate-y-4' : ''}>
-                  <p className="px-3 py-2 font-body text-sm font-semibold leading-snug text-ink">{fact}</p>
-                </SpeechBubble>
+            <div className="mt-8 grid items-stretch gap-4 sm:grid-cols-3">
+              {facts.map(({ label, text, icon: Icon, accent }) => (
+                <MangaPanel key={label} accent={accent} skew="none" className="flex flex-col p-5">
+                  <div className="flex items-center gap-2 border-b-2 border-dashed border-ink/30 pb-2">
+                    <span className="border-2 border-ink bg-ink p-1 text-bone">
+                      <Icon className="h-3.5 w-3.5" />
+                    </span>
+                    <span className="font-comic text-sm tracking-widest text-blood">{label}</span>
+                  </div>
+                  <p className="mt-3 font-body text-sm font-semibold leading-snug text-ink">{text}</p>
+                </MangaPanel>
               ))}
             </div>
           </motion.div>

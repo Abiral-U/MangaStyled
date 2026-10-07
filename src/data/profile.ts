@@ -7,7 +7,7 @@ export const profile = {
   volume: 'VOL.1',
   location: 'India · UTC+5:30',
   availability: 'OPEN FOR WORK',
-  email: 'naruzuma56@example.com',
+  email: 'naruzuma56@gmail.com',
   tagline:
     'I build AI-powered automation pipelines, RAG systems, and computer vision solutions that turn raw data into intelligent actions — from news aggregation to biodiversity conservation.',
   heroStats: [

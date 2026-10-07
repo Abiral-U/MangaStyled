@@ -43,11 +43,11 @@ function ProjectCover({ project, onOpen }: ProjectCoverProps) {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: '-60px' }}
       transition={{ type: 'spring', stiffness: 260, damping: 22 }}
-      className="relative group"
+      className="relative flex h-full flex-col group"
       data-ink-hover
     >
-      <button type="button" onClick={open} className="block w-full text-left focus:outline-none" aria-label={`Read the volume for ${project.title}`}>
-        <div className={cn('relative overflow-hidden border-4 border-ink manga-shadow-lg', cover.bg)}>
+      <button type="button" onClick={open} className="flex w-full flex-1 flex-col text-left focus:outline-none" aria-label={`Read the volume for ${project.title}`}>
+        <div className={cn('relative flex flex-1 flex-col overflow-hidden border-4 border-ink manga-shadow-lg', cover.bg)}>
           <div className="halftone pointer-events-none absolute inset-0 opacity-[0.14]" aria-hidden="true" />
           <div className="crosshatch pointer-events-none absolute inset-0 opacity-[0.05]" aria-hidden="true" />
 
@@ -62,7 +62,7 @@ function ProjectCover({ project, onOpen }: ProjectCoverProps) {
           </div>
 
           {/* Body */}
-          <div className="relative px-4 pb-12 pt-8 sm:px-5">
+          <div className="relative flex flex-1 flex-col justify-center px-4 pb-12 pt-8 sm:px-5">
             <KatakanaText
               outline="none"
               className={cn('pointer-events-none absolute -right-1 top-2 text-6xl sm:text-7xl', project.coverAccent === 'black' || project.coverAccent === 'crimson' ? 'text-bone/20' : 'text-ink/20')}
